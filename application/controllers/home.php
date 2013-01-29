@@ -32,7 +32,9 @@ class Home_Controller extends Base_Controller {
 
 	public function action_index()
 	{
-		return 'FOO-BAR';
+        print_r($_GET);
+        
+		return;
 	}
 
 }
