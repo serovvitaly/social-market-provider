@@ -32,10 +32,11 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home.index');
-});
+/**
+* Универсальный роутер
+*/
+Route::controller( Controller::detect() );
+
 
 /*
 |--------------------------------------------------------------------------
