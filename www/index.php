@@ -7,6 +7,13 @@ $app = new Silex\Application();
 $app['debug'] = true;
 
 
+
+$app->register(new Silex\Provider\TwigServiceProvider(), array(
+    'twig.path' => dirname( __DIR__ ) . '/views',
+));
+
+
+
 /**
 * Функция проверки, авто-регистрации и авто-авторизации социального пользовалетя
 * 
@@ -23,7 +30,9 @@ function is_alid_social_user()
 * Стартовая страница "/" - доступна без авторизации.
 */
 $app->get('/', function() use ($app) {
-    return '';
+    return $app['twig']->render('index.twig', array(
+        'name' => $name,
+    ));
 });
 $app->post('/', function() use ($app) {
     $app->abort(403, "Access denied");
