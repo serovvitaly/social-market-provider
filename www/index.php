@@ -1,0 +1,1 @@
+this - git@github.com:serovvitaly/social-market-provider.git
