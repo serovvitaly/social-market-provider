@@ -70,11 +70,11 @@ return array(
 		'mysql' => array(
 			'driver'   => 'mysql',
 			'host'     => '127.0.0.1',
-			'database' => 'database',
+			'database' => 'appros_master',
 			'username' => 'root',
-			'password' => '',
+			'password' => '123456',
 			'charset'  => 'utf8',
-			'prefix'   => '',
+			'prefix'   => 'som_',
 		),
 
 		'pgsql' => array(

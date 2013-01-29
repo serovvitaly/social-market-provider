@@ -32,10 +32,25 @@
 |
 */
 
+
+Route::secure('GET', '/', function(){
+    return 'gogo';
+});
+
+
+/*Route::any('(:all?)', function(){
+    if ( !Auth::user() ) {
+        return Response::make('Access denied', 403);
+    }
+    
+    return Response::make('Access denied', 403);
+});*/
+
+
 /**
 * Универсальный роутер
 */
-Route::controller( Controller::detect() );
+//Route::controller( Controller::detect() );
 
 
 /*

@@ -35,6 +35,16 @@ class Home_Controller extends Base_Controller {
         $response = new Response('', 200);
         $response->header('Content-Type', 'text/plain');
         
+        $api_id    = Input::get('api_id');
+        
+        $sid       = Input::get('sid');
+        
+        //$viewer_id = Input::get('viewer_id');
+        
+        if (!Auth::user()) {
+            //
+        }
+        
         print_r($_GET);
         
 		return $response;
