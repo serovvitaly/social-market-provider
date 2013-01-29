@@ -32,9 +32,12 @@ class Home_Controller extends Base_Controller {
 
 	public function action_index()
 	{
+        $response = new Response('', 200);
+        $response->header('Content-Type', 'text/plain');
+        
         print_r($_GET);
         
-		return;
+		return $response;
 	}
 
 }
