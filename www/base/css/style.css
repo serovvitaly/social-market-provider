@@ -4,19 +4,19 @@ body{
 }
 
 
-@media (max-width: 767px) {
-    .products [class*="span"],
-    .products .uneditable-input[class*="span"],
-    .products .row-fluid [class*="span"] {
-        float: left;
-        display: block;
-        width: 230px;
-        margin-left: 0;
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
-    } 
-}
+
+.products [class*="span"],
+.products .uneditable-input[class*="span"],
+.products .row-fluid [class*="span"] {
+    float: left;
+    display: block;
+    width: 230px;
+    margin-left: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+} 
+
 
 
 header{

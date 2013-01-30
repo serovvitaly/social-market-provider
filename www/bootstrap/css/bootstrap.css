@@ -5131,7 +5131,7 @@ button.close {
 .visible-desktop {
   display: inherit !important;
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 568px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -5145,7 +5145,7 @@ button.close {
     display: none !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 567px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -5159,7 +5159,7 @@ button.close {
     display: none !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 567px) {
   body {
     padding-left: 20px;
     padding-right: 20px;
@@ -5307,7 +5307,7 @@ button.close {
     position: static;
   }
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 568px) and (max-width: 979px) {
   .row {
     margin-left: -20px;
     *zoom: 1;
