@@ -3,6 +3,12 @@ body{
     padding: 0;
 }
 
+.main.container-fluid{
+    width: 690px;
+    margin: 0 auto;
+    padding: 0;   
+}
+
 
 
 .products [class*="span"],
