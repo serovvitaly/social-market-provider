@@ -8,6 +8,55 @@
   <link rel="stylesheet" href="/skin/default/css/style.css">
 
   <script src="/skin/default/js/jquery-1.9.0.min.js"></script>
+  
+  <script src="http://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){        
+        
+        $.nano = function(template, data) {
+            return template.replace(/\{([\w\.]*)\}/g, function (str, key) {
+                var keys = key.split("."), value = data[keys.shift()];
+                $.each(keys, function () { value = value[this]; });
+                return (value === null || value === undefined) ? "" : value;
+            });
+        };
+       
+        VK.init(function() {
+            //apiId: 3355850
+            //
+        });
+
+        /**
+        * Событие происходит, когда пользователь отменяет покупку.
+        */
+        VK.addCallback('onOrderCancel', function(){
+            //
+            clearItems();
+        });
+
+        /**
+        * Событие происходит, когда покупка закончилась успешно.
+        */
+        VK.addCallback('onOrderSuccess', function(orderId){
+            addToBasket(orderId);
+            clearItems();
+        });
+
+        /**
+        * Событие происходит, когда покупка закончилась неуспешно.
+        */
+        VK.addCallback('onOrderFail', function(errorCode){
+            //
+            clearItems();
+        });
+          
+    });
+    
+    function orderWindow(item_id){
+        alert(item_id)
+    }
+  </script>
+  
 <style>
 html{
     background: url(/other/img/img1349169500.jpg) center top;
