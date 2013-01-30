@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    background: none;
+   /* background: #304E7E; */
 }
 
 .main.container-fluid{
@@ -16,11 +18,15 @@ body{
 .products .row-fluid [class*="span"] {
     float: left;
     display: block;
-    width: 230px;
+    width: 227px;
     margin-left: 0;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
+}
+
+.products{
+    margin-right: -3px;
 } 
 
 
