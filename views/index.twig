@@ -1,7 +1,7 @@
 {% extends '_layout.twig' %}
 
 {% block content %}
-
+<div class="products">
 {% for prod in products %}
   <div id="product-{{prod.barcode}}" class="span4 product-item"><div class="product-item-wrapper">
       <div style="text-align: center;" class="fullinfo">
@@ -34,6 +34,7 @@
       </div>
   </div></div>
 {% endfor %}
+</div>
 
 
 {% endblock %}
