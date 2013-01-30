@@ -30,7 +30,7 @@ header{
 }
 
 .navbar-inner {
-    padding: 0;   
+    padding: 0 !important;   
 }
 .navbar {
     margin-bottom: 5px;
