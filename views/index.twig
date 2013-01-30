@@ -3,13 +3,13 @@
 {% block content %}
 
 {% for prod in products %}
-  <div id="product-{{prod.barcode}}" class="span2 product-item"><div class="product-item-wrapper">
+  <div id="product-{{prod.barcode}}" class="span4 product-item"><div class="product-item-wrapper">
       <div style="text-align: center;" class="fullinfo">
         <a href="#{{prod.barcode}}">
           <img class="product-image-mini" data-src="holder.js/120x120" alt="120x120" style="width: 120px; height: 120px;" src="{{prod.picture}}">
         </a>
       </div>
-      <div class="product-title-box fullinfo"><a href="#{{prod.barcode}}">{name}</a></div>
+      <div class="product-title-box fullinfo"><a href="#{{prod.barcode}}">{{prod.name}}</a></div>
       <div class="product-price-box">
         <table><tr>
           <td class="p-left">{{prod.price}} <sup>руб.</sup></td>
