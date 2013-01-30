@@ -28,3 +28,7 @@ body{
 header{
     height: 50px;
 }
+
+.navbar-inner {
+    padding: 0;   
+}
