@@ -1,11 +1,12 @@
 {% extends '_layout.twig' %}
 
 {% block content %}
-<div class="slyWrap">
+
 <div class="scrollbar">
   <div class="handle"></div>
 </div>
 <div class="products">
+<div class="slidee">
 {% for prod in products %}
   <div id="product-{{prod.barcode}}" class="span4 product-item"><div class="product-item-wrapper">
       <div style="text-align: center;" class="fullinfo">
