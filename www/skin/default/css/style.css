@@ -135,12 +135,12 @@ body{
     opacity: 0.25;
     filter: alpha(opacity=25);
     margin: 0 0 0 1px;
-    background-image: url(/vendor/bootstrap/img/glyphicons-halflings-002d44.png);
+    background-image: url(/bootstrap/img/glyphicons-halflings-002d44.png);
 }
 .product-item .product-basket-box .p-right a:hover i{
     opacity: 0.85;
     filter: alpha(opacity=85);
-    background-image: url(/vendor/bootstrap/img/glyphicons-halflings-white.png);
+    background-image: url(/bootstrap/img/glyphicons-halflings-white.png);
 }
 
 .product-item .blocker{
