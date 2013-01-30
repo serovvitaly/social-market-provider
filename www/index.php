@@ -13,6 +13,18 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'db.options' => array(
+        'driver'    => 'pdo_mysql',
+        'host'      => 'localhost',
+        'dbname'    => 'appros_master',
+        'user'      => 'root',
+        'password'  => '123456',
+        'charset'   => 'utf8',
+    ),
+));
+
+
 
 /**
 * Функция проверки, авто-регистрации и авто-авторизации социального пользовалетя
@@ -30,8 +42,13 @@ function is_alid_social_user()
 * Стартовая страница "/" - доступна без авторизации.
 */
 $app->get('/', function() use ($app) {
+    
+    $sql = "SELECT * FROM som_products LIMIT 9";
+    
+    $products = $app['db']->fetchAll($sql);
+    
     return $app['twig']->render('index.twig', array(
-        'name' => $name,
+        'products' => $products,
     ));
 });
 $app->post('/', function() use ($app) {
