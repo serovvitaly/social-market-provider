@@ -32,3 +32,6 @@ header{
 .navbar-inner {
     padding: 0;   
 }
+.navbar {
+    margin-bottom: 5px;
+}
