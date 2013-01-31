@@ -88,24 +88,28 @@ background-image: url(../img/top-navigate-bg.png);
 }
 
 .navbar .nav > li > a {
-float: none;
-padding: 9px 14px 9px;
-color: #777;
-text-decoration: none;
-text-shadow: 0 1px 0 white;
+    float: none;
+    padding: 9px 14px 9px;
+    color: #777;
+    text-decoration: none;
+    text-shadow: 0 1px 0 white;
 }
 
 .navbar .divider-vertical {
-height: 34px;
-margin: 0 9px;
-border-left: 1px solid #F2F2F2;
-border-right: 1px solid white;
+    height: 34px;
+    margin: 0 9px;
+    border-left: 1px solid #F2F2F2;
+    border-right: 1px solid white;
 }
 
 .modal-backdrop, .modal-backdrop.fade.in {
-opacity: 0.5;
-filter: alpha(opacity=50);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 .modal-backdrop {
-background-color: #4978B3;
+    background-color: #4978B3;
+}
+
+.modal {
+    border: 3px solid rgba(27, 48, 92, 0.6);
 }
