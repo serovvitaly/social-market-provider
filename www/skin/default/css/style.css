@@ -273,20 +273,6 @@ body{
     border-top-color: rgb(236, 236, 236);
 }
 
-.topsubmenu{
-    margin-bottom: 6px;
-    text-align: right;
-    margin-top: -10px;
-}
-.topsubmenu a{
-    padding: 0 9px;
-}
-.topsubmenu span{
-    font-size: 15px;
-    color: #B3CADB;
-    line-height: 9px;
-    display: inline-block;
-}
 
 
 .topmenu .search-element{
