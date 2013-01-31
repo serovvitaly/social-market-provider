@@ -8,10 +8,10 @@
   <div id="product-{{prod.barcode}}" class="span4 product-item"><div class="product-item-wrapper">
       <div style="text-align: center;" class="fullinfo">
         <a href="#{{prod.barcode}}">
-          <img class="product-image-mini" data-src="holder.js/120x120" alt="120x120" style="width: 120px; height: 120px;" src="{{prod.picture}}">
+          <img onclick="showDetails({{prod.id}})" class="product-image-mini" data-src="holder.js/120x120" alt="120x120" style="width: 120px; height: 120px;" src="{{prod.picture}}">
         </a>
       </div>
-      <div class="product-title-box fullinfo"><a href="#{{prod.barcode}}">{{prod.name}}</a></div>
+      <div class="product-title-box fullinfo"><a href="#{{prod.barcode}}" onclick="showDetails({{prod.id}}); return false;">{{prod.name}}</a></div>
       <div class="product-price-box">
         <table><tr>
           <td class="p-left">{{prod.price}} <sup>руб.</sup></td>
@@ -28,5 +28,26 @@
 {% endfor %}
 
 </div>
+
+<div id="productDetails" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3>Детали товара</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary">Save changes</button> 
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+  </div>
+</div>
+
+
+<script>
+function showDetails(id){
+    $('#productDetails').modal('show');
+}
+</script>
 
 {% endblock %}
