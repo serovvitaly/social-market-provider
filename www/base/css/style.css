@@ -101,3 +101,11 @@ margin: 0 9px;
 border-left: 1px solid #F2F2F2;
 border-right: 1px solid white;
 }
+
+.modal-backdrop, .modal-backdrop.fade.in {
+opacity: 0.5;
+filter: alpha(opacity=50);
+}
+.modal-backdrop {
+background-color: #4978B3;
+}
