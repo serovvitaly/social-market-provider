@@ -5,7 +5,7 @@
 <div class="products">
 
 {% for prod in products %}
-  <div id="product-{{prod.barcode}}" class="span4 product-item"><div class="product-item-wrapper">
+  <div id="product-{{prod.id}}" class="span4 product-item"><div class="product-item-wrapper">
       <div style="text-align: center;" class="fullinfo">
         <a href="#{{prod.barcode}}">
           <img onclick="showDetails({{prod.id}})" class="product-image-mini" data-src="holder.js/120x120" alt="120x120" style="width: 120px; height: 120px;" src="{{prod.picture}}">
@@ -25,6 +25,7 @@
         </tr></table>
       </div>
   </div></div>
+  <script>$('#product-{{prod.barcode}}').data('mix',{foo:300,bar:'hello-{{prod.barcode}}'})</script>
 {% endfor %}
 
 </div>
@@ -46,6 +47,7 @@
 
 <script>
 function showDetails(id){
+    console.log( $('#product-'+id).data('mix') );
     $('#productDetails').modal('show');
 }
 </script>
