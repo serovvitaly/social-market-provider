@@ -43,7 +43,7 @@ function is_alid_social_user()
 */
 $app->get('/', function() use ($app) {
     
-    $sql = "SELECT * FROM som_products LIMIT 9";
+    $sql = "SELECT * FROM som_products LIMIT 18";
     
     $products = $app['db']->fetchAll($sql);
     
