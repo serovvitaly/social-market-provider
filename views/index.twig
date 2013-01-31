@@ -47,7 +47,8 @@
 
 <script>
 function showDetails(id){
-    console.log( $('#product-'+id).data('mix') );
+    console.log( $('#product-'+id) );
+    console.log( $('#product-'+id).data() );
     $('#productDetails').modal('show');
 }
 </script>
