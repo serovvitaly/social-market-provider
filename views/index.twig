@@ -3,8 +3,7 @@
 {% block content %}
 
 <div class="products">
-<div class="scrollbar"><div class="handle"></div></div>
-<div class="slidee">
+
 {% for prod in products %}
   <div id="product-{{prod.barcode}}" class="span4 product-item"><div class="product-item-wrapper">
       <div style="text-align: center;" class="fullinfo">
@@ -27,7 +26,7 @@
       </div>
   </div></div>
 {% endfor %}
-</div>
+
 </div>
 
 {% endblock %}
