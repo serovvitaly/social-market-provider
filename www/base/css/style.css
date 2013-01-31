@@ -26,7 +26,7 @@ body{
 }
 
 .products{
-    margin-right: -3px;
+    margin-right: -13px;
     height: 730px;
     overflow: hidden;
 } 
@@ -42,4 +42,9 @@ header{
 }
 .navbar {
     margin-bottom: 5px;
+}
+
+
+.mCSB_container {
+    margin-right: 0px !important;
 }
