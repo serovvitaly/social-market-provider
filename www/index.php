@@ -36,6 +36,8 @@ function is_alid_social_user()
 }
 
 
+
+
 /**
 * Первый этап.
 * Стартовая страница "/", выдается только по запросу GET, иначе выдается 403.
@@ -51,8 +53,9 @@ $app->get('/', function() use ($app) {
         'products' => $products,
     ));
 });
-$app->post('/', function() use ($app) {
-    $app->abort(403, "Access denied");
+
+$app->get('/{partition}', function($partition) use ($app) {
+    return $app['twig']->render($partition . '.twig');
 });
 
 
